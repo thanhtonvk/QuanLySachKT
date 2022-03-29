@@ -21,15 +21,18 @@
 })
 @Html.ActionLink("Sach tai ban sau 2020", "SachTaiBanSau2020", null, new
 {
-@class = "btn btn-dark"
+@class = "btn btn-primary"
 })
 @Html.ActionLink("Sach tai ban lon hon 2", "SachTaiBanLon2", null, new
 {
-@class = "btn btn-light"
+@class = "btn btn-primary"
 })
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new
+{
+    @class = "btn btn-primary"
+})
 </p>
 <table class="table">
     <tr>
