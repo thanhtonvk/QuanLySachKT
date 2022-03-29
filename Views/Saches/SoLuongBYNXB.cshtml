@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "SoLuongBYNXB";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SoLuongBYNXB</h2>
+@using (Html.BeginForm())
+{
+    <p>
+       @Html.TextBox("nxb") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+@ViewBag.SoLuong
+

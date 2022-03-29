@@ -1,0 +1,68 @@
+﻿@model IEnumerable<QuanLySachKT.Models.Sach>
+
+@{
+    ViewBag.Title = "GetSachByLinhVuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetSachByLinhVuc</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.TextBox("linhvuc") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinhVu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CacTacGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhaXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LanTaiBan)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinhVu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CacTacGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaXB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamXB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LanTaiBan)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaSach }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSach })
+            </td>
+        </tr>
+    }
+
+</table>
